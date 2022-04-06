@@ -1,0 +1,62 @@
+{"dremio_cloner": [
+	{"command":"put"},
+	{"target": [
+	    {"endpoint": "http://localhost:9047/"},
+	    {"username": "jeff"},
+	    {"password": "<password>"},
+	    {"verify_ssl": "False"},
+	  	{"is_community_edition": "True"}]
+	},
+	{"source": [
+		{"directory":"/home/jeff/dev/dremio-backup-test"}]
+	},
+	{"options": [
+
+	  	{"dry_run":"False"},
+
+		{"logging.level":"logging.DEBUG"},
+		{"logging.format":"%(levelname)s:%(asctime)s:%(message)s"},
+		{"logging.filename":"dremiolog.txt"},
+	  	{"logging.verbose": "True"},
+
+		{"max_errors":"9999"},
+		{"http_timeout":"60"},
+		{"source.retry_timedout":"True"},
+
+		{"space.process_mode":"create_overwrite"},
+		{"folder.process_mode":"create_overwrite"},
+		{"source.process_mode":"create_overwrite"},
+		{"pds.process_mode":"promote"},
+		{"vds.process_mode":"create_overwrite"},
+	    {"reflection.process_mode": "create_overwrite"},
+	    {"pds.reflection_refresh_mode": "refresh"},
+	    {"wiki.process_mode": "create_overwrite"},
+		{"tag.process_mode": "process"},
+		{"home.process_mode": "process"},
+		{"vote.process_mode": "process"},
+		{"wlm.queue.process_mode": "process"},
+		{"wlm.rule.process_mode": "process"},
+
+		{"space.ignore_missing_acl_user":"True"},
+		{"space.ignore_missing_acl_group":"True"},
+		{"folder.ignore_missing_acl_user":"True"},
+		{"folder.ignore_missing_acl_group":"True"},
+		{"source.ignore_missing_acl_user":"True"},
+		{"source.ignore_missing_acl_group":"True"},
+		{"pds.ignore_missing_acl_user":"True"},
+		{"pds.ignore_missing_acl_group":"True"},
+		{"vds.ignore_missing_acl_user":"True"},
+		{"vds.ignore_missing_acl_group":"True"},
+
+	  	{"space.filter": "*"},
+		
+
+		{"source.filter":"*"},
+		
+
+		{"pds.filter":"*"},
+		
+
+		{"vds.filter":"*"}		
+]}]
+}
